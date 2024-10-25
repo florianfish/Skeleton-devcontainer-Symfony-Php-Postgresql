@@ -1,6 +1,6 @@
 services:
   dev:
-    image: php8.3-cli
+    image: yoanbernabeu/symfony-dev-container:latest
     command: sleep infinity
     volumes:
       - ../.:/workspace
