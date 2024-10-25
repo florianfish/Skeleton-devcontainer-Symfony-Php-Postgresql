@@ -32,3 +32,4 @@ RUN wget https://get.symfony.com/cli/installer -O - | bash \
 
 # Working directory
 WORKDIR /workspace
+
