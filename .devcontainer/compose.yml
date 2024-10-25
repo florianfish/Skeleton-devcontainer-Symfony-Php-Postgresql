@@ -1,8 +1,8 @@
 services:
   dev:
-    #image: florianfish35/symfony-7-php8.3-postgresql-16-dev-container:latest
+    image: florianfish35/symfony-7-php8.3-postgresql-16-dev-container:latest
     #image: yoanbernabeu/symfony-dev-container:latest
-    image: php8.3-cli
+    #image: php8.3-cli
     command: sleep infinity
     volumes:
       - ../.:/workspace
