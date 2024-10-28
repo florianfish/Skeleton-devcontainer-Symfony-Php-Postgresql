@@ -31,8 +31,8 @@ You can customize the containers by editing the `.devcontainer/compose.yml` file
 If you need to install additional PHP extensions or specific versions of software :
 - Modify the `Dockerfile`, build and push the image to your Docker registry.
 - Update the `image` field in the `dev` service in the `compose.yml` file.
-- Rebuild : docker build -t florianfish35/symfony-7-php8.3-postgresql-16-dev-container . --no-cache
-- Push to dockerhub : docker push florianfish35/symfony-7-php8.3-postgresql-16-dev-container:latest
+- Rebuild : `docker build -t florianfish35/symfony-7-php8.3-postgresql-16-dev-container . --no-cache`
+- Push to dockerhub : `docker push florianfish35/symfony-7-php8.3-postgresql-16-dev-container:latest`
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
