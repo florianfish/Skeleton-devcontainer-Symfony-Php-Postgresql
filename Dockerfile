@@ -11,8 +11,8 @@ RUN install-php-extensions \
 
 # PROBLEME SI ON RECUPERE LA DERNIERE VERSION LA PLUS A JOUR
 # Symfony CLI
-#RUN wget https://get.symfony.com/cli/installer -O - | bash \
-#    && mv /root/.symfony*/bin/symfony /usr/local/bin/symfony
+# RUN wget https://get.symfony.com/cli/installer -O - | bash \
+#     && mv /root/.symfony*/bin/symfony /usr/local/bin/symfony
 
 
 # FROM php:8.3-cli
