@@ -1,3 +1,0 @@
-babdev_pagerfanta:
-    default_view: twitter_bootstrap5
-    default_twig_template: '@App/Pagerfanta/default.html.twig'

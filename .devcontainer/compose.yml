@@ -1,6 +1,5 @@
 services:
   dev:
-    #image: yoanbernabeu/symfony-dev-container:latest
     image: florianfish35/symfony-7-php8.3-postgresql-16-dev-container:latest
     command: sleep infinity
     volumes:

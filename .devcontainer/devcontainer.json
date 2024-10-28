@@ -18,7 +18,8 @@
                 "TheNouillet.symfony-vscode", /* Symfony for VSCode */
                 "whatwedo.twig", /* Twig */
                 "mblode.twig-language-2", /* Twig Language 2 */
-                "nadim-vscode.twig-code-snippets" /* Twig code snippets */
+                "nadim-vscode.twig-code-snippets", /* Twig code snippets */
+                "ms-vscode.makefile-tools" /* Makefile Tools */
             ]
         }
     },
