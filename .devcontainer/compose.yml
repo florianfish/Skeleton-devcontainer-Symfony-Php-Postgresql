@@ -1,6 +1,6 @@
 services:
   dev:
-    image: florianfish35/symfony-7-php8.3-postgresql-16-dev-container:latest
+    image: florianfish35/symfony-php-dev-container:latest
     command: sleep infinity
     volumes:
       - ../.:/workspace
@@ -11,7 +11,7 @@ services:
       MAILER_DSN: "smtp://mailer:1025"
       
   database:
-    image: postgres:${POSTGRES_VERSION:-16}-alpine
+    image: postgres:${POSTGRES_VERSION:-17}-alpine
     environment:
       POSTGRES_DB: ${POSTGRES_DB:-app}
       # You should definitely change the password in production

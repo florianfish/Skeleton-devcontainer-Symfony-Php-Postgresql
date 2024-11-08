@@ -22,7 +22,7 @@ Symfony DevContainer comes with tree containers:
   - Composer
   - Symfony CLI
   - Some PHP extensions (e.g. xdebug, intl, pdo_pgsql)
-- PostgreSQL 16 (from official Docker image postgres:16-alpine)
+- PostgreSQL 17 (from official Docker image postgres:16-alpine)
 - Mailer (from axllent/mailpit)
 
 ## 4. Customization
@@ -31,5 +31,5 @@ You can customize the containers by editing the `.devcontainer/compose.yml` file
 If you need to install additional PHP extensions or specific versions of software :
 - Modify the `Dockerfile`, build and push the image to your Docker registry.
 - Update the `image` field in the `dev` service in the `compose.yml` file.
-- Rebuild : `docker build -t florianfish35/symfony-7-php8.3-postgresql-16-dev-container . --no-cache`
-- Push to dockerhub : `docker push florianfish35/symfony-7-php8.3-postgresql-16-dev-container:latest`
+- Rebuild : `docker build -t florianfish35/symfony-php-dev-container . --no-cache`
+- Push to dockerhub : `docker push florianfish35/symfony-php-dev-container:latest`
