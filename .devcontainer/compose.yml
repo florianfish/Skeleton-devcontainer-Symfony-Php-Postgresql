@@ -24,6 +24,8 @@ services:
       start_period: 60s
     volumes:
       - database_data:/var/lib/postgresql/data:rw
+    ports:
+      - "${DB_PORT:-5432}:5432"
 
   mailer:
     image: axllent/mailpit
