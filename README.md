@@ -1,4 +1,4 @@
-# Skeleton Symfony 7 + PHP 8.3 + PostgreSQL 16
+# Skeleton Symfony 7 + PHP 8.4 + PostgreSQL 17
 
 ## DevContainer
 
