@@ -25,7 +25,15 @@ RUN install-php-extensions \
     intl \
     pdo_pgsql \
     zip \
-    opcache
+    opcache \
+    xdebug
+
+# Configure Xdebug
+RUN echo "zend_extension=xdebug.so" > /usr/local/etc/php/conf.d/xdebug.ini \
+    && echo "xdebug.mode=debug" >> /usr/local/etc/php/conf.d/xdebug.ini \
+    && echo "xdebug.start_with_request=yes" >> /usr/local/etc/php/conf.d/xdebug.ini \
+    && echo "xdebug.client_host=host.docker.internal" >> /usr/local/etc/php/conf.d/xdebug.ini \
+    && echo "xdebug.client_port=9003" >> /usr/local/etc/php/conf.d/xdebug.ini
 
 # Composer
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
