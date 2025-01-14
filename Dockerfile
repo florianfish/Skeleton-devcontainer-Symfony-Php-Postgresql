@@ -1,5 +1,5 @@
 # Utilisez l'image de base fournie
-FROM php:8.3-cli
+FROM php:8.4-cli
 
 ENV SYMFONY_ALLOW_ALL_IP=true
 

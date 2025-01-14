@@ -6,7 +6,8 @@
 1. Copy the `.devcontainer` folder into root of your Symfony project.
 2. Open the project in Visual Studio Code.
 3. Click on the green icon in the bottom left corner and select `Reopen in Container`.
-4. ... Profit!
+4. Execute `composer install` from terminal
+5. Execute `symfony serve --no-tls` and go to http://localhost:{BACKEND_PORT}
 
 ## 2. Ports forwarding
 By default, the containers forward the following ports:
