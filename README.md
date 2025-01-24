@@ -25,7 +25,7 @@ The Symfony DevContainer comes with three containers:
   - Composer
   - Symfony CLI
   - Some PHP extensions (e.g., xdebug, intl, pdo_pgsql)
-- **PostgreSQL 16** (from the official Docker image `postgres:16-alpine`)
+- **PostgreSQL 17** (from the official Docker image `postgres:17-alpine`)
 - **Mailer** (from `axllent/mailpit`)
 
 ### 4. Customization
