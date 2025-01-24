@@ -25,6 +25,8 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v6
         with:
+          context: .devcontainer
+          file: .devcontainer/Dockerfile
           push: true
           tags: florianfish35/symfony-7-php8.3-postgresql-16-dev-container:latest
           platforms: linux/arm64,linux/amd64
