@@ -4,7 +4,7 @@
 
 ### 1. Usage
 
-1. Copy the `.devcontainer` folder into the root of your Symfony project.
+1. Copy the `.devcontainer` folder, `composer.json` and `Makefile` into the root of your Symfony project.
 2. Open the project in Visual Studio Code.
 3. Click on the green icon in the bottom left corner and select `Reopen in Container`.
 4. Execute `composer install` from the terminal.
