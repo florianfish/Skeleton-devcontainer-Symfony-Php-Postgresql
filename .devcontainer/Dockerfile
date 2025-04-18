@@ -26,7 +26,8 @@ RUN install-php-extensions \
     pdo_pgsql \
     zip \
     opcache \
-    xdebug
+    xdebug \
+    amqp
 
 # Configure Xdebug
 RUN echo "zend_extension=xdebug.so" > /usr/local/etc/php/conf.d/xdebug.ini \

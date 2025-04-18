@@ -1,6 +1,7 @@
 services:
   dev:
-    image: florianfish35/symfony-php-dev-container:latest
+    #image: florianfish35/symfony-php-dev-container:latest
+    image: ghcr.io/florianfish/skeletondevcontainersymfonyphppostgresql:latest
     command: sleep infinity
     volumes:
       - ../.:/workspace
@@ -40,6 +41,12 @@ services:
     environment:
       MP_SMTP_AUTH_ACCEPT_ANY: 1
       MP_SMTP_AUTH_ALLOW_INSECURE: 1
+
+  rabbitmq:
+    image: rabbitmq:3.9-management
+    ports:
+      - '5672:5672'
+      - '15672:15672'
 
 volumes:
   database_data:
