@@ -12,7 +12,7 @@
                 "bmewburn.vscode-intelephense-client", /* PHP Intelephense */
                 "xdebug.php-debug", /* PHP Debug*/
                 "xdebug.php-pack", /* PHP Extension Pack */
-                "ms-azuretools.vscode-docker", /* Docker */
+                "ms-azuretools.vscode-docker", /* Do  cker */
                 "mhutchie.git-graph", /* Git Graph*/
                 "formulahendry.docker-explorer", /* Docker Explorer */
                 "TheNouillet.symfony-vscode", /* Symfony for VSCode */
@@ -29,5 +29,6 @@
     "forwardPorts": [
         "dev:8000",
         "mailer:8025"
-    ]
+    ],
+    "postCreateCommand": "bash .devcontainer/startup.sh"
 }
