@@ -1,23 +1,25 @@
 # Utilisez l'image de base fournie
-FROM php:8.4-cli
+FROM php:8.4-cli-alpine
 
 ENV SYMFONY_ALLOW_ALL_IP=true
 
 # Dependencies
-RUN apt-get update \
-    && apt-get install -y \
-        git \
-        libicu-dev \
-        libpq-dev \
-        libzip-dev \
-        unzip \
-        wget \
-        zip \
-        curl \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache \
+    git \
+    icu-dev \
+    postgresql-dev \
+    libzip-dev \
+    unzip \
+    wget \
+    zip \
+    curl \
+    autoconf \
+    g++ \
+    make \
+    bash
 
 # PHP Extensions
+RUN apk add --no-cache --virtual .phpize-deps $PHPIZE_DEPS
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 RUN install-php-extensions \
     bcmath \
@@ -39,8 +41,8 @@ RUN echo "zend_extension=xdebug.so" > /usr/local/etc/php/conf.d/xdebug.ini \
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
 # Symfony CLI
-RUN wget https://get.symfony.com/cli/installer -O - | bash \
-    && mv /root/.symfony*/bin/symfony /usr/local/bin/symfony
+RUN curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.alpine.sh' | bash
+RUN apk add symfony-cli
 
 # Working directory
 WORKDIR /workspace
