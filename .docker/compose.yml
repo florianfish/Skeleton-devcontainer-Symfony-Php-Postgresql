@@ -1,6 +1,6 @@
 services:
   dev:
-    image: florianfish35/symfony-php-dev-container:latest
+    image: ghcr.io/florianfish/skeleton-devcontainer-symfony-php-postgresql:latest
     command: sleep infinity
     volumes:
       - ../.:/workspace

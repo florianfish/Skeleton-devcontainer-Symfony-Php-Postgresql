@@ -36,6 +36,10 @@ If you need to install additional PHP extensions or specific versions of softwar
 
 1. Modify the `Dockerfile`, build, and push the image to your Docker registry.
 2. Update the `image` field in the `dev` service in the `compose.yml` file.
-3. Rebuild with:
+3. Rebuild with (add `--no-cache` to force the rebuild):
    ```bash
-   docker build -t florianfish35/symfony-php-dev-container . --no-cache
+   docker build -t ghcr.io/florianfish/skeleton-devcontainer-symfony-php-postgresql:latest .
+4. Push it with:
+   ```bash
+   docker push ghcr.io/florianfish/skeleton-devcontainer-symfony-php-postgresql:latest
+   ```
