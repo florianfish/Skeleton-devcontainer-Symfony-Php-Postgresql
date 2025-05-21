@@ -40,6 +40,10 @@ sf-start: ## Start symfony server.
 	$(SYMFONY_SERVER_START)
 .PHONY: sf-start
 
+sf-start-notls: ## Start symfony server without tls.
+	$(SYMFONY_SERVER_START) --no-tls
+.PHONY: sf-start-notls
+
 sf-stop: ## Stop symfony server.
 	$(SYMFONY_SERVER_STOP)
 .PHONY: sf-stop
